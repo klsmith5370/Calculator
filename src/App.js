@@ -15,22 +15,27 @@ function App() {
   }; 
  
   function minus(e) { 
-  	// Add the code for the minus function 
+  	e.preventDefault();
+    setResult((result) => result + Number())
   };
  
-  function times(e) { 
+  function times(e) {
+    e.preventDefault(); 
     // Add the code for the plus function 
   }; 
  
-  function divide(e) { 
+  function divide(e) {
+    e.preventDefault();  
     // Add the code for the divide function 
   };
  
-  function resetInput(e) { 
+  function resetInput(e) {
+    e.preventDefault();  
     // Add the code for the resetInput function 
   }; 
  
   function resetResult(e) { 
+    e.preventDefault(); 
   	// Add the code for the resetResult function 
   }; 
  
@@ -49,12 +54,12 @@ function App() {
           type="number" 
           placeholder="Type a number" 
         /> 
-        <button onClick={plus}>add</button> 
-        {/* Add the subtract button */} 
-        {/* Add the multiply button */} 
-        {/* Add the divide button */} 
-        {/* Add the resetInput button */} 
-        {/* Add the resetResult button */} 
+        <button onClick={plus}>add</button>
+        <button onClick={subtract}>subtract</button>
+        <button onClick={multiply}>multiply</button>
+        <button onClick={divide}>divide</button>
+        <button onClick={resetInput}>reset Input</button>
+        <button onClick={resetResult}>reset Result</button> 
       </form> 
     </div> 
   ); 
